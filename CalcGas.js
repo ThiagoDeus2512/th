@@ -1,6 +1,7 @@
 /*const precoGasolina = 5.79;
 const kmPorLitros = 32;
 const distanciaTotal = 230;
+
 const litrosConsumidos = distanciaTotal / kmPorLitros;
 const gastosTotal = litrosConsumidos * precoGasolina;
 
@@ -11,11 +12,11 @@ const numeroPar = 44;
 
 const restoDivisao = numeroPar % 2;
 console.log(restoDivisao);
+
 if (restoDivisao === 0) {
     console.log("Numero Par")
 } else {
     console.log("Impar");
-
 }
 
 
@@ -95,10 +96,105 @@ else if (formPagamento === 3) {
 }
 else {
     console.log(precoProduto + (precoProduto * 0.1));
-}*/
+}
 function quadrado(valor) {
     return valor * valor;
 
 }
 const quadradoDez = quadrado(10);
 console.log(quadradoDez);
+
+
+function Juros(valor, juros) {
+    acrescimos = (valor / 100) * juros;
+    return valor + acrescimos;
+}
+
+console.log(Juros(100, 10));
+
+function calculoImc(peso, alt) {
+    return peso / Math.pow(alt, 2);
+
+}
+
+function classificarImc(imc) {
+
+    if (imc < 18.5) {
+        return ("abaixo do peso");
+    }
+    else if (imc >= 18.5 && imc < 25) {
+        return ("Peso normal");
+    }
+    else if (imc >= 25 && imc < 30) {
+        return ("Acima do peso");
+
+    }
+    else if (imc >= 30 && imc < 40) {
+        return ("Obeso");
+    }
+    else {
+        return ("Obsedidade grave");
+    }
+
+}
+
+(function () {
+
+    const alt = 1.82;
+    const peso = 145;
+    const imc = calculoImc(peso, alt);
+
+    console.log(classificarImc(imc));
+})();
+
+
+(function (){
+
+})();
+
+function escrevaNome(nome) {
+    console.log("Meu nome:" + nome);
+}
+escrevaNome("Thiago de Deus Jacom");
+escrevaNome("Lucas Jacom");
+
+
+function maiorIdade(idade) {
+    if (idade >= 18) {
+        console.log("Maior de idade");
+
+    } else {
+        console.log("menor de idade");
+    }
+}
+maiorIdade(17);*/
+
+
+
+function aplicarDesconto(valor, desconto) {
+    return (valor - (valor * (desconto / 100)));
+
+}
+
+function aplicarJuros(valor, juros) {
+    return (valor + (valor * (juros / 100)));
+
+
+
+}
+if (formPagamento === 1) {
+    return (precoProd - (precoProd * desconto));
+}
+
+
+else if (formPagamento === 2) {
+    return (precoProd - (precoProd * desconto));
+}
+else if (formPagamento === 3) {
+    return (precoProd);
+} else {
+    return (precoProd + (precoProd * desconto));
+
+}
+
+}   
