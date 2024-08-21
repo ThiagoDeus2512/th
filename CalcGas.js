@@ -167,9 +167,10 @@ function maiorIdade(idade) {
         console.log("menor de idade");
     }
 }
-maiorIdade(17);*/
+maiorIdade(17);
 
-
+const precoProd = 100;
+const formPagamento = 3;
 
 function aplicarDesconto(valor, desconto) {
     return (valor - (valor * (desconto / 100)));
@@ -183,18 +184,81 @@ function aplicarJuros(valor, juros) {
 
 }
 if (formPagamento === 1) {
-    return (precoProd - (precoProd * desconto));
-}
-
-
-else if (formPagamento === 2) {
-    return (precoProd - (precoProd * desconto));
-}
-else if (formPagamento === 3) {
-    return (precoProd);
+    console.log(aplicarDesconto(precoProd, 10));
+} else if (formPagamento === 2) {
+    console.log(aplicarDesconto(precoProd, 15));
+} else if (formPagamento === 3) {
+    console.log(precoProd);
 } else {
-    return (precoProd + (precoProd * desconto));
+    console.log(aplicarJuros(precoProd, 10));
 
 }
 
-}   
+console.log((200 * 15) / 100);
+
+const pessoa = {
+
+    nome: "Thiago de deis jacom",
+    idade: 42,
+    Sexo: "M",
+    alt: 1.82,
+
+    descrever: function () {
+        console.log(`Meu nome é ${this.nome} e minha idade é ${this.idade} sou do do sexo ${this.Sexo} minha alt é ${this.alt}`);
+    }
+
+};
+
+pessoa.descrever();
+
+class pessoa {
+
+    nome;
+    endereço;
+    idade;
+    descrever() {
+        console.log(`Meu nome é ${this.nome} e minha idade é ${this.idade} sou do do sexo ${this.Sexo} minha alt é ${this.alt}`);
+    }
+}
+
+const thiago = new pessoa();
+thiago.nome = " Thiago de Deus";
+thiago.endereço = "Tomaz Paulino de Almeida";
+thiago.idade = 42;
+
+console.log(thiago);
+thiago.descrever();
+
+class Pessoa {
+
+    nome;
+    idade;
+    Nascimento;
+
+    constructor(nome, idade) {
+        this.nome = nome;
+        this.idade = idade;
+        this.Nascimento = 2024 - idade;
+
+    }
+    descrever() {
+        console.log(`Nome ${this.nome} idade ${this.idade}`);
+
+    }
+}
+
+function comparaIdades(p1, p2) {
+    if (p1.idade > p2.idade) {
+        console.log(`P1 mais velho: ${p1.idade}`);
+    } else if (p2.idade > p1.idade) {
+        console.log(`P2 mais velho: ${p2.idade}`);
+    } else {
+        console.log("Mesma Idade");
+    }
+
+}
+const renata = new Pessoa("renata", 45);
+const Lucas = new Pessoa("Lucas", 45);
+
+comparaIdades(renata, Lucas);*/
+
