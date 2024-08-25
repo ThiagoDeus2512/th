@@ -32,5 +32,3 @@ function compIdade(p1, p2) {
 }
 const thiago = new Pessoa("Thiago", 40);
 const Lucas = new Pessoa("Lucas", 40);
-
-compIdade(thiago, Lucas);

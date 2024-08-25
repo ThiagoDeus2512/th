@@ -1,5 +1,4 @@
 class Pessoa {
-
     nome;
     peso;
     alt;
@@ -15,5 +14,3 @@ class Pessoa {
     }
 
 
-
-}
