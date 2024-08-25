@@ -17,9 +17,9 @@ class Carros {
     }
 
 }
-const Uno = new Carros("Fiat", "Vermelho", 1 / 22);
-const Gol = new Carros("volk", "Verde", 1 / 18);
+const Uno = new Carros("Fiat", "Vermelho", 1 / 12);
+const Gol = new Carros("volk", "Verde", 1 / 12);
 const Onix = new Carros("Chevrolet", "Azul", 1 / 32);
 
 
-console.log(Gol.calcGatosTotal(70.5));
+console.log(Gol.calcGatosTotal(70, 5));
